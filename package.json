@@ -24,6 +24,7 @@
     "react-dom": "^17.0.1",
     "react-redux": "^7.2.2",
     "react-scripts": "4.0.1",
+    "react-search-field": "^1.2.0",
     "redux": "^4.0.5",
     "web-vitals": "^0.2.4"
   },
@@ -33,7 +34,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "chromatic": "npx chromatic --project-token fd4986bb8bd4"
   },
   "eslintConfig": {
     "extends": [

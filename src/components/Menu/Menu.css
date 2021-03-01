@@ -1,0 +1,17 @@
+.Menu {
+  display: flex;
+  justify-content: space-around;
+}
+
+.Item li {
+  display: flex;
+  padding-top: 0.9rem;
+}
+
+.Search {
+  padding-top: 0.3rem;
+}
+
+.Item li ul {
+  padding-left: 1.3rem;
+}
