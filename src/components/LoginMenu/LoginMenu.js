@@ -17,7 +17,7 @@ const LoginMenu = () => {
         </div>
         <div className="logo">
           <img className="zefo" src={zefo} alt="zefo_logo" />
-          <p>|</p>
+          <hr />
           <p>by</p>
           <img className="quikr" src={quikr} alt="quikr_logo" />
         </div>
