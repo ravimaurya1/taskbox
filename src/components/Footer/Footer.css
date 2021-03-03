@@ -11,6 +11,10 @@
   background-color: #7fd6d8;
   margin-top: 2rem;
 }
+.Footer {
+  background-color: white;
+}
+
 .get_them:hover {
   background-color: #5ac6c7;
 }

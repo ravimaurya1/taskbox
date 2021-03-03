@@ -1,0 +1,15 @@
+.ProductInfo {
+  display: flex;
+}
+
+.ProductInfo .ProductImage {
+  width: 50%;
+}
+.ProductInfo .Info {
+  width: 50%;
+}
+
+.Product {
+  margin-top: 3rem;
+  background-color: white;
+}
