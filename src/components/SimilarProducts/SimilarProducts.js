@@ -23,7 +23,6 @@ const SimilarProducts = (props) => {
 
   if (loading) return <div>Loading...</div>;
   if (error) return <div>Error!</div>;
-  console.log(data.similarProduct);
   return (
     <div className="ProductsList">
       {data.similarProduct.map((data, index) => {

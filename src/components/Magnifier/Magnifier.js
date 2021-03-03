@@ -7,6 +7,7 @@ const PROD_INFO = gql`
   query prod_info($id: ID!) {
     info(id: $id) {
       imageLinks
+      name
     }
   }
 `;
@@ -15,21 +16,25 @@ const Magnifier = (props) => {
   const { loading, error, data } = useQuery(PROD_INFO, {
     variables: { id: props.pid },
   });
+  if (loading) return <div>Loading...</div>;
+  if (error) return <div>Error!</div>;
+  console.log(data);
+  let imagelink = data.info.imageLinks[0];
   return (
     <div className="perimeter">
       <div className="image">
         <ReactImageMagnify
           {...{
             smallImage: {
-              alt: "Wristwatch by Ted Baker London",
+              alt: data.info.name,
               isFluidWidth: true,
-              src: `https://img8.gozefo.com/p/1/5/7/3/0/3/5/2/9/5/1/5/0/5/4/7/6/4/1/0.jpg`,
+              src: imagelink,
               sizes:
                 "(min-width: 800px) 33.5vw, (min-width: 415px) 50vw, 100vw",
             },
             largeImage: {
-              alt: "",
-              src: `https://img8.gozefo.com/p/1/5/7/3/0/3/5/2/9/5/1/5/0/5/4/7/6/4/1/0.jpg`,
+              alt: data.info.name,
+              src: imagelink,
               width: 1200,
               height: 1800,
             },
