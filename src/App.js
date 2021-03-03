@@ -13,7 +13,7 @@ const App = () => {
       <Menu />
       <Switch>
         <Route path="/" exact component={Product} />
-        <Route path="/cart" exact component={Cart} />
+        {/* <Route path="/cart" exact component={Cart} /> */}
       </Switch>
       <Footer />
     </>
