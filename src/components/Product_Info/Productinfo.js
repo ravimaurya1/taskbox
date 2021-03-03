@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useQuery, gql } from "@apollo/client";
 import "./Productinfo.css";
+import bazar from "../../assets/img/quikrbazaar.png";
 
 const PROD_INFO = gql`
   query prod_info($id: ID!) {
@@ -34,7 +35,34 @@ const Productinfo = (props) => {
         <button className="BuyNowButton">BUY NOW</button>
       </div>
       <hr />
-      <div className="offer"></div>
+      <div className="offer">
+        <h2>Offer</h2>
+        <hr />
+      </div>
+      <div className="ZefoAssessment">
+        <h3>ZEFO ASSESSMENT</h3>
+        <p>
+          This is a flawless product with no defects. To know more about Zefo
+          product conditon<a href="#">Click Here</a>
+        </p>
+      </div>
+      <div
+        className="ZefoExperienceZone"
+        style={{ backgroundImage: `url(${bazar})` }}
+      >
+        <h2>ZEFO Experience Zone</h2>
+        <p>See this Product before you buy!</p>
+        <form>
+          <select name="cars" id="cars" className="select">
+            <option value="">Select Store Location</option>
+            <option value="Banglore">Banglore</option>
+            <option value="Delhi">Delhi</option>
+            <option value="Hyderbad">Hyderbad</option>
+          </select>
+          <input type="text" placeholder="Name" className="name" />
+          <input type="number" placeholder="Phone" className="phone" />
+        </form>
+      </div>
     </div>
   );
 };
