@@ -61,6 +61,9 @@ const Productinfo = (props) => {
           </select>
           <input type="text" placeholder="Name" className="name" />
           <input type="number" placeholder="Phone" className="phone" />
+          <button type="submit" className="schedule">
+            SCHEDULE NOW
+          </button>
         </form>
       </div>
     </div>
