@@ -21,26 +21,33 @@ const Magnifier = (props) => {
   console.log(data);
   let imagelink = data.info.imageLinks[0];
   return (
-    <div className="perimeter">
-      <div className="image">
-        <ReactImageMagnify
-          {...{
-            smallImage: {
-              alt: data.info.name,
-              isFluidWidth: true,
-              src: imagelink,
-              sizes:
-                "(min-width: 800px) 33.5vw, (min-width: 415px) 50vw, 100vw",
-            },
-            largeImage: {
-              alt: data.info.name,
-              src: imagelink,
-              width: 1200,
-              height: 1800,
-            },
-            isHintEnabled: true,
-          }}
-        />
+    <div className="Image">
+      <div className="perimeter">
+        <div className="image">
+          <ReactImageMagnify
+            {...{
+              smallImage: {
+                alt: data.info.name,
+                isFluidWidth: true,
+                src: imagelink,
+                sizes:
+                  "(min-width: 800px) 33.5vw, (min-width: 415px) 50vw, 100vw",
+              },
+              largeImage: {
+                alt: data.info.name,
+                src: imagelink,
+                width: 1200,
+                height: 1800,
+              },
+              isHintEnabled: true,
+            }}
+          />
+        </div>
+      </div>
+      <div className="ImageList">
+        {data.info.imageLinks.map((image, index) => {
+          return <img src={image} key={index} />;
+        })}
       </div>
     </div>
   );
