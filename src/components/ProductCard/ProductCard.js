@@ -1,9 +1,20 @@
 import React from "react";
 import "./ProductCard.css";
 
-const ProductCard = ({ name, price, offerPrice, id, imagelink, condition }) => {
+const ProductCard = ({
+  name,
+  price,
+  offerPrice,
+  id,
+  imagelink,
+  condition,
+  setPid,
+}) => {
+  const imageClick = (pid) => {
+    setPid(pid);
+  };
   return (
-    <div className="Card">
+    <div className="Card" onClick={() => imageClick(parseInt(id))}>
       <div className="image">
         <img src={imagelink} alt="product_image" />
       </div>

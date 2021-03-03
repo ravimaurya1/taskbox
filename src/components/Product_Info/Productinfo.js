@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useQuery, gql } from "@apollo/client";
 import "./Productinfo.css";
 import bazar from "../../assets/img/quikrbazaar.png";
+import { Helmet } from "react-helmet";
 
 const PROD_INFO = gql`
   query prod_info($id: ID!) {
@@ -28,6 +29,9 @@ const Productinfo = (props) => {
   const { name, condition, offerPrice, price, title, availability } = data.info;
   return (
     <div className="Productinfo">
+      <Helmet>
+        <title>{name}</title>
+      </Helmet>
       <div className="header">
         <h2>{name}</h2>
         <h3>Condition. {condition}</h3>

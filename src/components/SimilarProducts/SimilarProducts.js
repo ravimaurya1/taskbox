@@ -29,6 +29,7 @@ const SimilarProducts = (props) => {
       {data.similarProduct.map((data, index) => {
         return (
           <ProductCard
+            setPid={props.setPid}
             key={index}
             name={data.name}
             condition={data.condition}
