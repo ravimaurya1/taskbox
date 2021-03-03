@@ -5,7 +5,7 @@ import Magnifier from "../Magnifier/Magnifier";
 import "./Product.css";
 
 const Product = () => {
-  const [pid, setPid] = useState(401949);
+  const [pid, setPid] = useState(284074);
   return (
     <div className="Product">
       <div className="ProductInfo">
@@ -16,6 +16,7 @@ const Product = () => {
           <Productinfo pid={pid} />
         </div>
       </div>
+      <div className="SimilarProducts"></div>
     </div>
   );
 };

@@ -1,8 +1,20 @@
 import React from "react";
 import ReactImageMagnify from "react-image-magnify";
+import { useQuery, gql } from "@apollo/client";
 import "./Magnifier.css";
 
-const Magnifier = () => {
+const PROD_INFO = gql`
+  query prod_info($id: ID!) {
+    info(id: $id) {
+      imageLinks
+    }
+  }
+`;
+
+const Magnifier = (props) => {
+  const { loading, error, data } = useQuery(PROD_INFO, {
+    variables: { id: props.pid },
+  });
   return (
     <div className="perimeter">
       <div className="image">

@@ -1,5 +1,9 @@
 .ProductInfo {
   display: flex;
+  margin-bottom: 2rem;
+  box-shadow: 5px 5px 10px grey;
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
 
 .ProductInfo .ProductImage {
@@ -14,5 +18,4 @@
 
 .Product {
   margin-top: 3rem;
-  background-color: white;
 }
