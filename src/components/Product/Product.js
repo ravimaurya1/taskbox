@@ -4,6 +4,7 @@ import Productinfo from "../Product_Info/Productinfo";
 import Magnifier from "../Magnifier/Magnifier";
 import SimilarProducts from "../SimilarProducts/SimilarProducts";
 import "./Product.css";
+import ProductDetails from "../ProductDetails/ProductDetails";
 
 const Product = () => {
   const [pid, setPid] = useState(284074);
@@ -17,7 +18,11 @@ const Product = () => {
           <Productinfo pid={pid} />
         </div>
       </div>
+      <div className="ProductDetails">
+        <ProductDetails pid={pid} />
+      </div>
       <div className="SimilarProducts">
+        <h2>Similar Products</h2>
         <SimilarProducts pid={pid} setPid={setPid} />
       </div>
     </div>

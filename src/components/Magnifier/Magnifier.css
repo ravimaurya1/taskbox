@@ -17,9 +17,9 @@
 }
 
 @media (min-width: 415px) {
-  .perimeter {
-    /* flex-direction: row; */
-  }
+  /* .perimeter {
+    flex-direction: row;
+  } */
 
   .image {
     flex: 0 0 50%;

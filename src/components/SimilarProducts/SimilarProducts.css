@@ -1,7 +1,6 @@
 .ProductsList {
   display: flex;
   justify-content: space-evenly;
-  margin-top: 2rem;
   margin-bottom: 2rem;
   background-color: white;
   padding: 1rem;
