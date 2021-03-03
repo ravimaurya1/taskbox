@@ -1,9 +1,18 @@
 import React from "react";
 import { useQuery, gql } from "@apollo/client";
+import ProductCard from "../ProductCard/ProductCard";
+import "./SimilarProducts.css";
 
 const SIMILAR_PROD = gql`
   query similar_prod($id: ID!) {
-    similarProduct(id: $id)
+    similarProduct(id: $id) {
+      id
+      condition
+      name
+      price
+      offerPrice
+      imagelink
+    }
   }
 `;
 
@@ -15,7 +24,23 @@ const SimilarProducts = (props) => {
   if (loading) return <div>Loading...</div>;
   if (error) return <div>Error!</div>;
   console.log(data.similarProduct);
-  return <div className="ProductsList"></div>;
+  return (
+    <div className="ProductsList">
+      {data.similarProduct.map((data, index) => {
+        return (
+          <ProductCard
+            key={index}
+            name={data.name}
+            condition={data.condition}
+            id={data.id}
+            imagelink={data.imagelink}
+            offerPrice={data.offerPrice}
+            price={data.price}
+          />
+        );
+      })}
+    </div>
+  );
 };
 
 export default SimilarProducts;
