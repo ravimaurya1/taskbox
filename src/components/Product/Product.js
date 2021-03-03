@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { gql } from "@apollo/client";
 import Productinfo from "../Product_Info/Productinfo";
 import Magnifier from "../Magnifier/Magnifier";
+import SimilarProducts from "../SimilarProducts/SimilarProducts";
 import "./Product.css";
 
 const Product = () => {
@@ -16,7 +17,9 @@ const Product = () => {
           <Productinfo pid={pid} />
         </div>
       </div>
-      <div className="SimilarProducts"></div>
+      <div className="SimilarProducts">
+        <SimilarProducts pid={pid} setPid={setPid} />
+      </div>
     </div>
   );
 };
