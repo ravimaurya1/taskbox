@@ -4,6 +4,7 @@ import LoginMenu from "./components/LoginMenu/LoginMenu";
 import Menu from "./components/Menu/Menu";
 import Footer from "./components/Footer/Footer";
 import { Route, Switch, useLocation } from "react-router-dom";
+import Product from "./components/Product/Product";
 
 const App = () => {
   return (

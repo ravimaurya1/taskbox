@@ -2,10 +2,10 @@ import React, { useEffect, useState } from "react";
 import { useQuery, gql } from "@apollo/client";
 
 const PROD_INFO = gql`
-  query info($id: ID) {
-    title
-    description
-    price
+  query prod_info($id: ID!) {
+    info(id: $id) {
+      title
+    }
   }
 `;
 
