@@ -4,9 +4,12 @@
 
 .ProductInfo .ProductImage {
   width: 50%;
+  height: 100vh;
 }
 .ProductInfo .Info {
   width: 50%;
+  height: 100vh;
+  overflow-y: scroll;
 }
 
 .Product {

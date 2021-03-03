@@ -33,6 +33,8 @@ const Productinfo = (props) => {
         <h4>Est original Rs.{price}</h4>
         <button className="BuyNowButton">BUY NOW</button>
       </div>
+      <hr />
+      <div className="offer"></div>
     </div>
   );
 };

@@ -8,6 +8,7 @@
 
 .image {
   flex: 0 0 100%;
+  width: 100%;
 }
 
 .copy {
@@ -17,7 +18,7 @@
 
 @media (min-width: 415px) {
   .perimeter {
-    flex-direction: row;
+    /* flex-direction: row; */
   }
 
   .image {
