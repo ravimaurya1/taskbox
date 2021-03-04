@@ -13,6 +13,10 @@ const PROD_INFO = gql`
       availability
       offerPrice
       name
+      metaInfo {
+        title
+        description
+      }
     }
   }
 `;
@@ -26,11 +30,16 @@ const Productinfo = (props) => {
 
   if (loading) return <div>Loading...</div>;
   if (error) return <div>Error!</div>;
+
   const { name, condition, offerPrice, price, title, availability } = data.info;
+  const metaInfo = data.info.metaInfo;
+
+  console.log("metaInfo", metaInfo);
   return (
     <div className="Productinfo">
       <Helmet>
         <title>{name}</title>
+        <meta name="description" content={metaInfo.description} />
       </Helmet>
       <div className="header">
         <h2>{name}</h2>
