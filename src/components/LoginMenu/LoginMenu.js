@@ -5,6 +5,7 @@ import quikr from "../../assets/img/qukir2.jpg";
 import heart from "../../assets/img/heart.png";
 import cart from "../../assets/img/cart.png";
 import login from "../../assets/img/login.png";
+import { Link } from "react-router-dom";
 
 const LoginMenu = () => {
   return (
@@ -25,9 +26,9 @@ const LoginMenu = () => {
           <a href="#">
             <img src={heart} alt="heart" />
           </a>
-          <a href="#">
+          <Link to="/cart">
             <img src={cart} alt="cart" />
-          </a>
+          </Link>
           <a href="#">
             <img src={login} alt="login" />
             <span>LOGIN</span>

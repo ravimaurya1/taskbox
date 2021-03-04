@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import ReactImageMagnify from "react-image-magnify";
 import { useQuery, gql } from "@apollo/client";
 import "./Magnifier.css";
@@ -16,10 +16,14 @@ const Magnifier = (props) => {
   const { loading, error, data } = useQuery(PROD_INFO, {
     variables: { id: props.pid },
   });
+
+  //Selected Images
+  const [selectedImage, setSelectedImage] = useState(0);
+
   if (loading) return <div>Loading...</div>;
   if (error) return <div>Error!</div>;
-  console.log(data);
-  let imagelink = data.info.imageLinks[0];
+
+  let imagelink = data.info.imageLinks[selectedImage];
   return (
     <div className="Image">
       <div className="perimeter">
@@ -46,7 +50,13 @@ const Magnifier = (props) => {
       </div>
       <div className="ImageList">
         {data.info.imageLinks.map((image, index) => {
-          return <img src={image} key={index} />;
+          return (
+            <img
+              src={image}
+              key={index}
+              onClick={() => setSelectedImage(index)}
+            />
+          );
         })}
       </div>
     </div>

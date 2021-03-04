@@ -36,9 +36,11 @@
   width: 100px;
   padding-left: 0.2rem;
   padding-right: 0.2rem;
+  cursor: pointer;
 }
 
 .Image .ImageList {
   display: flex;
   overflow-x: scroll;
+  margin-top: 3rem;
 }
